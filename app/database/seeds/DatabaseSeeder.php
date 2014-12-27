@@ -10,8 +10,9 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
-		// $this->call('UserTableSeeder');
+		DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+		$this->call('UserTableSeeder');
+		$this->call('NotificationTableSeeder');
+		DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 	}
-
 }
