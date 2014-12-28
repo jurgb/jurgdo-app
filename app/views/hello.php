@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Laravel PHP Framework</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="/chocolatechip-ui/chui-ios-3.7.0.min.css" type="text/css">
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 	<script>
@@ -28,6 +27,12 @@
 
 </head>
 <body>
-	
+	<nav>
+        
+        <ul>
+            <li><a href="/"><img src="images/logo.png" alt=""></a></li>
+            <li><a href="/angulardemo">notifications</a></li>
+        </ul>
+    </nav>
 </body>
 </html>

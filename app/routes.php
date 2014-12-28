@@ -19,9 +19,13 @@ Route::get('/', function()
 Route::get('/angulardemo', function(){
 	return View::make('angulardemo');
 });
-
 // -- end
 
+
+/*API part ------------------------------------------
+|
+|
+*/
 Route::group(array('prefix' => 'api/v1'), function()
 {
 	Route::resource('notification', 'api\v1\NotificationController',
