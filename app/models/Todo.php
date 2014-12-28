@@ -1,5 +1,5 @@
 <?php 
-	class Notification extends Eloquent{
+	class Todo extends Eloquent{
 		
 		public function user()
 	    {

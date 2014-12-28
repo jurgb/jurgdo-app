@@ -8,7 +8,7 @@ app.controller("NotificationController", function($scope, NotificationAPI){
 	$scope.load = function(){
 		NotificationAPI.index()
 			.success(function(data){
-				$scope.notifications = data.notifications;
+				$scope.notifications = data.todos;
 			})
 	};
 

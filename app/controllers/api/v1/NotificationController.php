@@ -6,22 +6,22 @@ class NotificationController extends \BaseController {
 	public function index()
 	{
 		//return "hello API v1!";
-		$response = array("status" => "success", "notifications" => \Notification::with('user')->get());
+		$response = array("status" => "success", "todos" => \Todo::with('user')->get());
 		return \Response::json($response);
 	}
 
 	public function show($id)
 	{
 		// show only one specific notification
-		$notification = \Notification::find($id);
-		$response = array("status" => "success", "notification" => $notification);
+		$todo = \Todo::find($id);
+		$response = array("status" => "success", "todo" => $todo);
 		return Response::json($response);
 	}
 
 	public function store()
 	{
 
-		$n = new \Notification();
+		$n = new \Todo();
 		$n->user_id = 1; // grab this from a session instead
 		$n->notification = \Input::get("notification");
 		$n->save();

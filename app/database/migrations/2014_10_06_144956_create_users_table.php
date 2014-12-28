@@ -10,15 +10,24 @@ class CreateUsersTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function up()
+public function up()
 	{
-		Schema::create('users', function($table)
-	    {
-	        $table->increments('id');
-	        $table->string('email')->unique();
-	        $table->string('password');
-	        $table->timestamps();
-	    });
+		Schema::create('users', function($gebruiker)
+		{
+		    $gebruiker->increments('id');
+		    $gebruiker->String('name');
+		    $gebruiker->String('firstname');
+		    $gebruiker->String('email');
+		    $gebruiker->String('password');
+            $gebruiker->string('address')->nullable();
+            $gebruiker->string('postalcode')->nullable();
+            $gebruiker->string('city')->nullable();
+            $gebruiker->string('image')->default('default.png');
+		    $gebruiker->boolean('confirmed')->default(0);
+            $gebruiker->string('confirmation_code')->nullable();
+		    $gebruiker->string('remember_token', 100)->nullable();
+		    $gebruiker->timestamps('');
+		});
 	}
 
 	/**

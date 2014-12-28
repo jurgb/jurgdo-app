@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNotificationsTable extends Migration {
+class CreateTodoTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,16 @@ class CreateNotificationsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('notifications', function($table)
+		Schema::create("todos", function($table)
 	    {
 	        $table->increments('id');
 	        $table->integer('user_id')->unsigned();
 	        $table->foreign('user_id')->references('id')->on('users');
-	        $table->string('notification');
+            $table->string('title');
+	        $table->string('description');
+            $table->string('status');
+            $table->integer('duration')->default(0);
+            $table->integer('duration-done')->default(0);
 	        $table->timestamps();
 	    });
 	}
@@ -29,7 +33,7 @@ class CreateNotificationsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('notifications');
+		Schema::dropIfExists('todos');
 	}
 
 }

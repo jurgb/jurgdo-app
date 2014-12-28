@@ -11,21 +11,39 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
-Route::get('/angulardemo', function(){
-	return View::make('angulardemo');
-});
-// -- end
-
-
-/*API part ------------------------------------------
+/*
+|--------------------------------------------------------------------------
+| Get Routes
+|--------------------------------------------------------------------------
 |
+| Here are all the ::get routes I use in this project.
 |
 */
+
+Route::get('/', 'HomeController@showWelcome');
+
+Route::get('/app', 'AppController@showAppHome');
+
+
+/*
+|--------------------------------------------------------------------------
+| Post Routes
+|--------------------------------------------------------------------------
+|
+| Here are all the ::post routes I use in this project.
+|
+*/
+
+
+/*
+|--------------------------------------------------------------------------
+| API routes
+|--------------------------------------------------------------------------
+|
+| Here are all the routes I use for a public API in this project.
+|
+*/
+
 Route::group(array('prefix' => 'api/v1'), function()
 {
 	Route::resource('notification', 'api\v1\NotificationController',

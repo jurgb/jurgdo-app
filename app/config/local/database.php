@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'x.weareimd.be',
+			'database'  => 'jurgdo-app',
 			'username'  => 'jurgb',
 			'password'  => '1308JuBa',
 			'charset'   => 'utf8',
