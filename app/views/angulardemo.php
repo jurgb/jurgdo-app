@@ -18,28 +18,25 @@
 <body style="padding-top: 2Em">
 	<div class="container" ng-app="IMDApp">
 		<div ng-controller="NotificationController" ng-init="load()">
-		    <nav>
-                <ul>
-                    <li><a href="/"><img src="images/logo.png" alt=""></a></li>
-                    <li><a href="/angulardemo">notifications</a></li>
-                    <li class="dropdown">
-                        <input ng-model="searchtext" class="btn btn-default dropdown-toggle" placeholder="Search users" type="text" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li ng-repeat="message in notifications | filter: searchtext" role="presentation"><a role="menuitem" tabindex="-1" href="#"><% message.notification %></a></li>
-                        </ul>
-                    </li>
-                </ul>
+		    <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <ul class="nav nav-pills">
+                        <li><a href="/app">Homepage</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <li class="dropdown">
+                            <input ng-model="searchtext" class="form-control btn btn-default dropdown-toggle" placeholder="Search users" type="text" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="message in notifications | filter: searchtext" role="presentation"><a role="menuitem" tabindex="-1" href="#"><% message.title %></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-    <div id="content" ng-view>
-        
-        
-    </div>
-		
+            <div id="content" ng-view>
 
+
+            </div>
 		</div>
-
 	</div><!-- end container -->
-
-
 </body>
 </html>

@@ -20,7 +20,12 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'UserController@showSignup');
+Route::get('/login', 'UserController@showLogin');
+
+Route::get('register/verify/{confirmationCode}', 'RegistrationController@confirm');
+Route::get('/logout', 'UserController@handleLogout');
+//requires login!
 
 Route::get('/app', 'AppController@showAppHome');
 
@@ -33,7 +38,8 @@ Route::get('/app', 'AppController@showAppHome');
 | Here are all the ::post routes I use in this project.
 |
 */
-
+Route::post('/', 'UserController@handleSignup');
+Route::post('/login', 'UserController@handleLogin');
 
 /*
 |--------------------------------------------------------------------------

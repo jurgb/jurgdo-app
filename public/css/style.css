@@ -1,3 +1,12 @@
-body{
-    background-color: #BFD4DB;
-}
+/*
+|--------------------------------------------------------------------------
+| CSS for JurgDo-App
+|--------------------------------------------------------------------------
+|
+| This is a webapplication built by Jurgen Barbier.
+| More information about this developer can be found at www.jurgb.be
+| Or on his Twitter account @jurg_b
+|
+*/
+
+body { padding-top: 70px; } /*to compensate the fixed navbar */
