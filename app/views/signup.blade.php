@@ -1,4 +1,4 @@
-@extends('layout/frontend')
+@extends('layout/beforelogin')
 
 
 @section('title')
@@ -8,7 +8,12 @@ Jurgdo-app - Signup page
 
 @section('content')
         <div class="row">
-            <div id='signup' class="login-panel panel panel-default col-md-4 col-md-offset-8">
+            <div class="jumbotron col-md-8">
+                <h1>Discover the new todo-application</h1>
+                <p>Created by <a href="http://www.jurgb.be">Jurgen Barbier</a></p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+            <div id='signup' class="login-panel panel panel-default col-md-4">
                 <div class="panel-heading">
                     <h3 class="panel-title">Signup for JurgDo-App</h3>
                 </div>

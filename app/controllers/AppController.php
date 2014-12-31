@@ -6,7 +6,7 @@ class AppController extends BaseController {
 	{
         if(Auth::check())
 		{
-            return View::make('angulardemo');
+            return View::make('app');
 		}
 		else
 		{

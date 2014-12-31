@@ -1,4 +1,4 @@
-@extends('layout/frontend')
+@extends('layout/beforelogin')
 
 
 @section('title')

@@ -9,4 +9,21 @@
 |
 */
 
-body { padding-top: 70px; } /*to compensate the fixed navbar */
+body{
+    padding-top: 70px;
+} /*to compensate the fixed navbar*/
+
+.navbar{
+    background: rgba(200,200,200,0.7);   
+}
+.nav-logo{
+    width: 40px;
+    margin-top: -10px;
+}
+.nav-components{
+    margin-top: 10px;   
+}
+.nav-search
+{
+    width: 300px;
+}

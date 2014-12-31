@@ -25,6 +25,8 @@ Route::get('/login', 'UserController@showLogin');
 
 Route::get('register/verify/{confirmationCode}', 'RegistrationController@confirm');
 Route::get('/logout', 'UserController@handleLogout');
+
+
 //requires login!
 
 Route::get('/app', 'AppController@showAppHome');
