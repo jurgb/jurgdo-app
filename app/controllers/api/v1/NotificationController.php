@@ -6,7 +6,7 @@ class NotificationController extends \BaseController {
 	public function index()
 	{
 		//return "hello API v1!";
-		$response = array("status" => "success", "todos" => \Todo::with('user')->get());
+		$response = array("status" => "success", "todos" => \Todo::with('users')->get());
 		return \Response::json($response);
 	}
 

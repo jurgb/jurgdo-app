@@ -1,18 +1,14 @@
 <div ng-controller="NotificationController" ng-init="load()">
-      <form role="form">
-		  <div class="form-group">
-		    <label for="exampleInputEmail1">Notification</label>
-		    <input type="text" class="form-control" id="notification" ng-model="notification" name="notification">
-		  </div>
-
-		  <button type="submit" class="btn btn-default" ng-click="save()">Bewaren</button>
-		</form>
-
-		<h2 style="margin-top: 2em">What's up!</h2>
+    <a href="#/new" class="btn btn-md">New item</a>
+    <div id="todo-items" class="col-sm-9 col-md-9">
+		<h2>What to do?</h2>
 		<ul class="list-group">
 		  <li ng-repeat="message in notifications" class="list-group-item">
-		  	<% message.description %>
-		  	<a class="pull-right" ng-click="delete(message.id, $index)" href="#">delete</a>
+		      <% message.title %>
+		      <% message.description %>
+		      <% message.status %>
+		      <a class="pull-right" ng-click="delete(message.id, $index)" href="#">delete</a>
 		  </li>
 		</ul>
+    </div>
 </div>

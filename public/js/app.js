@@ -10,6 +10,11 @@ app.config(function($routeProvider) {
                 controller: 'NotificationController',
                templateUrl: '/views/notifications.html'
             })
+        .when('/new',
+            {
+                controller: 'NotificationController',
+               templateUrl: '/views/NewTodo.html'
+            })
         //Define a route that has a route parameter in it (:customerID)
         .when('/details',
             {
