@@ -7,18 +7,18 @@ app.config(function($routeProvider) {
     $routeProvider
         .when('/',
             {
-                controller: 'NotificationController',
+                controller: 'AngTodoController',
                templateUrl: '/views/notifications.html'
             })
         .when('/new',
             {
-                controller: 'NotificationController',
+                controller: 'AngTodoController',
                templateUrl: '/views/NewTodo.html'
             })
         //Define a route that has a route parameter in it (:customerID)
         .when('/details',
             {
-                controller: 'NotificationController',
+                controller: 'AngTodoController',
                templateUrl: '/views/notificationsdetails.html'
             })
 

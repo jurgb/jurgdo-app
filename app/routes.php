@@ -51,13 +51,6 @@ Route::post('/login', 'UserController@handleLogin');
 | Here are all the routes I use for a public API in this project.
 |
 */
-
-Route::group(array('prefix' => 'api/v1'), function()
-{
-	Route::resource('notification', 'api\v1\NotificationController',
-		array('only' => array('index', 'store', 'destroy')));
-});
-
 Route::group(array('prefix' => 'api/v1'), function()
 {   
     Route::get('todo/user/{user}', 'api\v1\TodoController@user');

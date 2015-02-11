@@ -26,7 +26,7 @@ class TodoController extends \BaseController{
 		$t->title = \Input::get("title");
         $t->description = \Input::get("description");
         $t->status = \Input::get("status");
-        $t->duration = \Input::get("time");
+        $t->duration = \Input::get("duration");
 		$t->save();
 		return \Response::json(array('success' => true, 'todo' => $t));
 	}
@@ -44,16 +44,14 @@ class TodoController extends \BaseController{
 		$todo->title = \Input::get("title");
         $todo->description = \Input::get("description");
         $todo->status = \Input::get("status");
-        $todo->time = \Input::get("time");
+        $todo->duration = \Input::get("duration");
 		$todo->save();
         
 		return \Response::json(array('success' => true, 'todo' => $todo));
     }
     public function destroy($id)
 	{
-        $todo = \Todo::find($id);
-        $todo->delete();
-
-        return \Response::json(array('success' => true, 'message' => "Todo item $id has been deleted"));
+        $removed = \Todo::destroy($id);
+		return \Response::json(array('success' => $removed));
     }
 }

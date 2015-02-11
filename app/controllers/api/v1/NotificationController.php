@@ -20,12 +20,16 @@ class NotificationController extends \BaseController {
 
 	public function store()
 	{
-        //nog fixen zodat alle criteria voldoen om deze op te slagen in de databank
-		$n = new \Todo();
-		$n->user_id = 1; // grab this from a session instead
-		$n->notification = \Input::get("notification");
-		$n->save();
-		return \Response::json(array('success' => true, 'notification' => $n));
+
+		$t = new \Todo();
+		$t->user_id = \Session::get('user')->id; // grab this from a session instead
+		$t->title = \Input::get("title");
+        $t->description = \Input::get("description");
+        $t->status = \Input::get("status");
+        $t->duration = \Input::get("time");
+		$t->save();
+		return \Response::json(array('success' => true, 'notification' => $t));
+	
 	}
 
 	public function destroy($id)

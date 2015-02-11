@@ -6,7 +6,7 @@ Jurgdo-App
 @stop
 
 @section('content')
-		<div ng-controller="NotificationController" ng-init="load()">
+		<div ng-controller="AngTodoController" ng-init="index()">
 		    <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                     <ul class="nav navbar-nav navbar-left">

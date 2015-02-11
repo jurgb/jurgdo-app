@@ -1,4 +1,4 @@
-<div ng-controller="NotificationController" ng-init="load()">
+
       <form role="form">
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Notification</label>
@@ -10,9 +10,8 @@
 
 		<h2 style="margin-top: 2em">What's up!</h2>
 		<ul class="list-group">
-		  <li ng-repeat="message in notifications" class="list-group-item">
+		  <li ng-repeat="message in todos" class="list-group-item">
 		  	<% message.notification %>
 		  	<a class="pull-right" ng-click="delete(message.id, $index)" href="#">delete</a>
 		  </li>
 		</ul>
-</div>

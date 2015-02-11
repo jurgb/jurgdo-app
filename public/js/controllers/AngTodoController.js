@@ -9,13 +9,18 @@ app.controller("AngTodoController", function($scope, TodoAPI){
     $scope.edittodos = [
         
     ];
-
+    
     $scope.index = function(){
       //Alle notifications binnehalen en in scope stoppen
 		TodoAPI.index()
 			.success(function(data){
+                if(data.todo.length == 0){
+                    console.log("geen data om weer te geven");
+                }else{
 				$scope.todos = data.todo;
                 $scope.predicate = 'status';
+                console.log(data.todo);
+                }
 			});
 	
     };
@@ -32,7 +37,7 @@ app.controller("AngTodoController", function($scope, TodoAPI){
             "title": $scope.titleText,
             "description": $scope.descriptionText,
             "status": $scope.selectText,
-            "time": $scope.timeText
+            "duration": $scope.duration
         };
         TodoAPI.store(newTodo)
             .success(function(data){
@@ -41,11 +46,12 @@ app.controller("AngTodoController", function($scope, TodoAPI){
                 TodoAPI.index()
                     .success(function(data){
                         $scope.todos = data.todo;
+                    console.log('saven is gelukt');
                 });
                 $scope.titleText = "";
                 $scope.descriptionText = "";
                 $scope.selectText = "";
-                $scope.timeText = "";
+                $scope.duration = "";
             });
    };
     
