@@ -21,7 +21,7 @@ class CreateTodoTable extends Migration {
 	        $table->string('description');
             $table->string('status');
             $table->integer('duration')->default(0);
-            $table->integer('duration-done')->default(0);
+            $table->integer('durationDone')->default(0);
 	        $table->timestamps();
 	    });
 	}

@@ -45,6 +45,7 @@ class TodoController extends \BaseController{
         $todo->description = \Input::get("description");
         $todo->status = \Input::get("status");
         $todo->duration = \Input::get("duration");
+        $todo->durationDone = \Input::get("durationDone");
 		$todo->save();
         
 		return \Response::json(array('success' => true, 'todo' => $todo));

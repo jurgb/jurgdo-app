@@ -12,7 +12,7 @@ class TodosTableSeeder extends Seeder {
             'description' => "Docent A. Bastiaan zal afwezig zijn op 22/10/2014.",
             'status' => "planned",
             'duration' => 12,
-            'duration-done' => 0
+            'durationDone' => 2
         ));
 
         Todo::create(array(
@@ -21,7 +21,7 @@ class TodosTableSeeder extends Seeder {
             'description' => "Op 6/10 zal er een persconferentie van Telenet plaatsvinden in de Creativity Gym.",
             'status' => "doing",
             'duration' => 5,
-            'duration-done' => 2
+            'durationDone' => 3.5
         ));
 
         Todo::create(array(
@@ -30,7 +30,7 @@ class TodosTableSeeder extends Seeder {
             'description' => "IMD Café nodigt binnenkort opnieuw enkele sprekers uit om te spreken over SKETCH!",
             'status' => "done",
             'duration' => 5,
-            'duration-done' => 5
+            'durationDone' => 5
         ));
 
         

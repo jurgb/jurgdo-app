@@ -15,7 +15,6 @@ app.factory("TodoAPI", function($http){
      TodoAPI.store = function(data){
         
         return $http.post("/api/v1/todo", data);
-         
     };
     
     TodoAPI.update = function(data){

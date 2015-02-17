@@ -56,6 +56,10 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::get('todo/user/{user}', 'api\v1\TodoController@user');
 	Route::resource('todo', 'api\v1\TodoController');
 });
+Route::group(array('prefix' => 'api/v1'), function()
+{   
+	Route::resource('user', 'api\v1\UserController');
+});
 /*Route::group(array('prefix' => 'api/v2'), function()
 {
 	Route::resource('notification', 'api\v2\NotificationController',

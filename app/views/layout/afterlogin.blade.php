@@ -13,7 +13,9 @@
 	<script src="/js/angular-route.js"></script>
 	<script src="/js/app.js"></script>
 	<script src="/js/factories/TodoAPI.js"></script>
+	<script src="/js/factories/UserAPI.js"></script>
 	<script src="/js/controllers/AngTodoController.js"></script>
+	<script src="/js/controllers/AngUserController.js"></script>
 </head>
 <body>
     <div class="container" ng-app="IMDApp">
