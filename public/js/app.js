@@ -1,4 +1,4 @@
-var app = angular.module('IMDApp', ['ngRoute'], function($interpolateProvider) {
+var app = angular.module('IMDApp', ['ngRoute','ngAnimate'], function($interpolateProvider) {
         $interpolateProvider.startSymbol('<%');
         $interpolateProvider.endSymbol('%>');
 });

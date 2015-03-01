@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.5/angular.min.js"></script>
+	<script type="text/javascript" src="http://code.angularjs.org/1.2.1/angular-animate.js"></script>
 	<script src="/js/angular-route.js"></script>
 	<script src="/js/app.js"></script>
 	<script src="/js/factories/TodoAPI.js"></script>

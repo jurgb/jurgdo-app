@@ -90,8 +90,6 @@ app.controller("AngTodoController", function($scope, TodoAPI, $routeParams){
             .success(function(data){
                 console.log('delete is gelukt');
                 console.log(data);
-                $scope.todos.splice($tod.id, 1);
-
                 TodoAPI.index()
                     .success(function(data){
                         $scope.todos = data.todo;
