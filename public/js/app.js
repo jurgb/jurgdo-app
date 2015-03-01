@@ -8,18 +8,18 @@ app.config(function($routeProvider) {
         .when('/',
             {
                 controller: 'AngTodoController',
-               templateUrl: '/views/notifications.html'
+                templateUrl: '/views/notifications.html'
             })
         .when('/new',
             {
                 controller: 'AngTodoController',
-               templateUrl: '/views/NewTodo.html'
+                templateUrl: '/views/NewTodo.html'
             })
         //Define a route that has a route parameter in it (:customerID)
-        .when('/details',
+        .when('/edit/:TodID',
             {
                 controller: 'AngTodoController',
-               templateUrl: '/views/notificationsdetails.html'
+                templateUrl: '/views/notificationsedit.html'
             })
 
     });

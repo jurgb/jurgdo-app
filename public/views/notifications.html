@@ -16,12 +16,13 @@
                             <div class="progress-bar" ng-class='whatClassIsIt((100 * message.durationDone / message.duration))' role="progressbar" aria-valuenow="<% (100 * message.durationDone / message.duration)| number:0 %>" aria-valuemin="0" aria-valuemax="100" style="width:<% (100 * message.durationDone / message.duration)| number:0 %>%">
                                 <% (100 * message.durationDone / message.duration)| number:0 %>%
                             </div>
+                                <p class="timeleft"> <% (message.duration - message.durationDone)| number:0 %>H left </p>
                         </div>
                     </div>
                     <div class="col-md-3" >
-                        <a ng-click="setdone(message)" ng-class='disableorno((100 * message.durationDone / message.duration))' href="#" class="btn btn-success glyphicon glyphicon-check"></a>
-                        <a ng-click="delete(message)" href="#" class="btn btn-warning glyphicon glyphicon-edit"></a>
-                        <a ng-click="delete(message)" href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                        <a ng-click="setdone(message)" ng-class='disableorno((100 * message.durationDone / message.duration))' href="#" onclick="return false;" class="btn btn-success glyphicon glyphicon-check"></a>
+                        <a href="#/edit/<% message.id %>"  class="btn btn-warning glyphicon glyphicon-edit"></a>
+                        <a ng-click="delete(message)" href="#" onclick="return false;" class="btn btn-danger glyphicon glyphicon-trash"></a>
                     </div>
                 </div>
 		  </li>

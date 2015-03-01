@@ -1,4 +1,4 @@
-app.controller("AngTodoController", function($scope, TodoAPI){
+app.controller("AngTodoController", function($scope, TodoAPI, $routeParams){
            
     //scope is wat de view allemaal kent
     
@@ -41,7 +41,9 @@ app.controller("AngTodoController", function($scope, TodoAPI){
     
     $scope.show = function($id){
       //Alle notifications binnehalen en in scope stoppen
-		TodoAPI.show($id)
+        var todoID = $routeParams.TodID;
+
+		TodoAPI.show(todoID)
 			.success(function(data){
 				$scope.edittodos = data.todo;
 			});

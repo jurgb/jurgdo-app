@@ -32,8 +32,7 @@ Jurgdo-App
                     </ul>
                 </div>
             </nav>
-            <div id="content" ng-view>
-
+            <div id="content" ng-view ng-model="currentuser" value="{{Session::get('user')->id;}}">
 
             </div>
 		</div>

@@ -1,0 +1,30 @@
+<div ng-init="show()">    
+    <div id="todo-items" class="col-sm-12 col-md-12">
+       <div class="row">
+            <h2 class="col-sm-6">Edit your todo</h2>
+		    <a href="#/" class="btn btn-default col-sm-2 col-sm-offset-4 col-md-2 col-md-offset-4">Go back</a>
+        </div>
+		<ul class="list-group">
+            <span ng-model="foutmelding"><% foutmelding %></%></span>
+
+                <div class="row">
+                    <div class="todo-title col-md-5">
+                        <% edittodos.title %>
+                    </div>
+                    <div class="todo-progress col-md-4">
+                        <div class="progress">
+                            <div class="progress-bar" ng-class='whatClassIsIt((100 * edittodos.durationDone / edittodos.duration))' role="progressbar" aria-valuenow="<% (100 * edittodos.durationDone / edittodos.duration)| number:0 %>" aria-valuemin="0" aria-valuemax="100" style="width:<% (100 * edittodos.durationDone / edittodos.duration)| number:0 %>%">
+                                <% (100 * edittodos.durationDone / edittodos.duration)| number:0 %>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" >
+                        <a ng-click="setdone(edittodos)" ng-class='disableorno((100 * edittodos.durationDone / edittodos.duration))' href="#" onclick="return false;" class="btn btn-success glyphicon glyphicon-check"></a>
+                        <a href="#/edit/<% edittodos.id %>"  class="btn btn-warning glyphicon glyphicon-edit"></a>
+                        <a ng-click="delete(edittodos)" href="#" onclick="return false;" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    </div>
+                </div>
+
+		</ul>
+    </div>
+</div>
