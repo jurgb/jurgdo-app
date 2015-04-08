@@ -2,20 +2,20 @@
 
 
 @section('title')
-Jurgdo-app - Signup page
+MPD - Signup page
 @stop
 
 
 @section('content')
         <div class="row">
-            <div class="jumbotron col-md-8">
-                <h1>Discover the new todo-application</h1>
+            <div class="col-md-8">
+                <h1>Discover the newest generation of travel apps</h1>
                 <p>Created by <a href="http://www.jurgb.be">Jurgen Barbier</a></p>
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
             </div>
             <div id='signup' class="login-panel panel panel-default col-md-4">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Signup for JurgDo-App</h3>
+                    <h3 class="panel-title">Signup for MPD</h3>
                 </div>
                 <div class="feedback">
 @if($errors->has())

@@ -2,7 +2,7 @@
 
 
 @section('title')
-Login to JurgDo-App
+Login to MPD
 @stop
 
 @section('content')

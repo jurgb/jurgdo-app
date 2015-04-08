@@ -1,6 +1,6 @@
 /*
 |--------------------------------------------------------------------------
-| CSS for JurgDo-App
+| CSS for My Perfect Destination app (MPD-app)
 |--------------------------------------------------------------------------
 |
 | This is a webapplication built by Jurgen Barbier.
@@ -8,55 +8,109 @@
 | Or on his Twitter account @jurg_b
 |
 */
+.menuBtn {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px 0 0 16px;
+  width: 36px;
+}
+md-toolbar h1 {
+  font-weight: 500;
+}
+.muppet-list
+{
+    background-color: #131921;
+    color: #fff;
+}
+.muppet-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+.muppet-list .selected {
+  color: #03a9f4;
+  border-right: 2px solid #48bebc;
+  background-color: rgba(255,255,255,0.05);
+}
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin: 4px 16px; 
+  vertical-align: middle;
+  width: 48px;
+}
+.content-wrapper {
+  position: relative;
+}
+#primary-col {
+  overflow: hidden;
+}
+#primary-col .md-button {
+  margin: 8px auto 16px 0;
+}
+#primary-col .cell {
+  flex: 1 1 auto;
+}
+#primary-col img {
+  display: block;
+  max-width: 100%;
+}
 
-body{
-    padding-top: 70px;
-} /*to compensate the fixed navbar*/
+/* Utils */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0; 
+  position: absolute;
+  width: 1px;
+}
 
-.navbar{
-    background: rgba(200,200,200,0.7);   
-}
-.nav-logo{
-    width: 40px;
-    margin-top: -10px;
-}
-.nav-components{
-    margin-top: 10px;   
-}
-.nav-search
-{
-    width: 300px;
-}
-/*
-.todo-title,
-.todo-progress
-{
-    padding-top: 7px;
-    margin-bottom: -10px;
-}
-.timeleft
-{
-    text-align: center;
-}
+/* Using Data-URI converted from svg until <md-icon> becomes available 
+https://github.com/google/material-design-icons
 */
-
-/* you can also define the transition style
-   on the base class as well (.repeat-item) */
-.repeat-item.ng-enter{
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
+.menuBtn {
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat  center center;
 }
 
-.repeat-item.ng-enter{
-  opacity:0;
-  height: 20px;
+
+
+
+/*My styles for mpd-app*/
+
+.mpd-container
+{
+    background-color: #eeedee;
 }
 
-.repeat-item.ng-enter.ng-enter-active {
-  opacity:1;
-   height: 60px;
-}
-.repeat-item {
-
-  height: 60px;
-}
+/*profile menu item style*/
+    .profilepic{
+        width: 48px;
+    }
+    .profilepicwrapper{
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        display:inline-block;
+    }
+    .profile_banner_list,
+    .profile_banner_list li
+    {
+        margin-top: 8px;
+        list-style: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .profile_banner_list{
+        padding-left: 0px;   
+    }
+    .profile_banner_list li.space5{
+        margin-left: 5px;   
+    }
+/*end profile menu item style*/
